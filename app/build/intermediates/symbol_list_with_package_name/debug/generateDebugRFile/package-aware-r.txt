@@ -1,2 +1,0 @@
-com.retroarcade
-string app_name

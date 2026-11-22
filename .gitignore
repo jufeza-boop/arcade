@@ -1,12 +1,62 @@
-*.iml
-.gradle
-/local.properties
-/.idea
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# ==========================================
+# Gradle & Build Artifacts
+# ==========================================
+.gradle/
+build/
+**/build/
+app/build/
+
+# ==========================================
+# Android & Local SDK
+# ==========================================
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Native libraries generated or extracted
 libs/armeabi-v7a/
 libs/arm64-v8a/
 libs/x86_64/
+libs/x86/
+app/libs/
+
+# Keystores & Signing
+*.keystore
+*.jks
+
+# ==========================================
+# Kotlin
+# ==========================================
+.kotlin/
+*.kotlin_module
+
+# ==========================================
+# IDE & Editors
+# ==========================================
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# ==========================================
+# OS & System Files
+# ==========================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ==========================================
+# Temporary & Log Files
+# ==========================================
+*.log
+*.tmp
+*.bak
