@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+libs/armeabi-v7a/
+libs/arm64-v8a/
+libs/x86_64/

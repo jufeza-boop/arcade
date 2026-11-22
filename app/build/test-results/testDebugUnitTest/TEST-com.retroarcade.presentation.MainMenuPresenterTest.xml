@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.retroarcade.presentation.MainMenuPresenterTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-22T17:41:05.776Z" hostname="LAPTOP-CMGHJDO7" time="0.008">
+  <properties/>
+  <testcase name="Navegación circular hacia adelante y atrás en la lista de juegos" classname="com.retroarcade.presentation.MainMenuPresenterTest" time="0.001"/>
+  <testcase name="Selección directa de un juego" classname="com.retroarcade.presentation.MainMenuPresenterTest" time="0.001"/>
+  <testcase name="Reflejar ajustes de modo de control y silenciado" classname="com.retroarcade.presentation.MainMenuPresenterTest" time="0.001"/>
+  <testcase name="Obtener récord actual del juego seleccionado" classname="com.retroarcade.presentation.MainMenuPresenterTest" time="0.002"/>
+  <testcase name="El juego seleccionado por defecto debe ser TETRIS" classname="com.retroarcade.presentation.MainMenuPresenterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

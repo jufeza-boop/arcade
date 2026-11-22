@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.retroarcade.presentation.SettingsPresenterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-22T17:41:05.786Z" hostname="LAPTOP-CMGHJDO7" time="0.002">
+  <properties/>
+  <testcase name="Alternar modo de control cambia y persiste correctamente" classname="com.retroarcade.presentation.SettingsPresenterTest" time="0.0"/>
+  <testcase name="Alternar estado silenciado cambia y persiste correctamente" classname="com.retroarcade.presentation.SettingsPresenterTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,8 @@
+com.retroarcade.app-pngs-0 C:\Users\jufez\Desktop\arcade\arcade\app\build\generated\res\pngs\debug
+com.retroarcade.app-updated_navigation_xml-1 C:\Users\jufez\Desktop\arcade\arcade\app\build\generated\updated_navigation_xml\debug
+com.retroarcade.app-packageDebugResources-2 C:\Users\jufez\Desktop\arcade\arcade\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.retroarcade.app-packageDebugResources-3 C:\Users\jufez\Desktop\arcade\arcade\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.retroarcade.app-debug-4 C:\Users\jufez\Desktop\arcade\arcade\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.retroarcade.app-debug-5 C:\Users\jufez\Desktop\arcade\arcade\app\src\debug\res
+com.retroarcade.app-main-6 C:\Users\jufez\Desktop\arcade\arcade\app\src\main\res
+gradleHome-0 C:\Users\jufez\.gradle
