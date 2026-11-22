@@ -63,7 +63,11 @@ class RetroArcadeGame : Game() {
     }
 
     fun goToGame(gameId: GameId) {
-        setScreen(GamePlaceholderScreen(this, gameId))
+        if (gameId == GameId.TETRIS) {
+            setScreen(TetrisScreen(this))
+        } else {
+            setScreen(GamePlaceholderScreen(this, gameId))
+        }
     }
 
     override fun render() {

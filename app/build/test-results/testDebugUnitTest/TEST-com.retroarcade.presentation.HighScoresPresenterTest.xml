@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.retroarcade.presentation.HighScoresPresenterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-22T17:41:05.770Z" hostname="LAPTOP-CMGHJDO7" time="0.005">
+<testsuite name="com.retroarcade.presentation.HighScoresPresenterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-22T18:02:23.963Z" hostname="LAPTOP-CMGHJDO7" time="0.006">
   <properties/>
-  <testcase name="Cambio de juego seleccionado en la pantalla de récords" classname="com.retroarcade.presentation.HighScoresPresenterTest" time="0.002"/>
+  <testcase name="Cambio de juego seleccionado en la pantalla de récords" classname="com.retroarcade.presentation.HighScoresPresenterTest" time="0.001"/>
   <testcase name="Obtención de lista Top 10 para el juego actual" classname="com.retroarcade.presentation.HighScoresPresenterTest" time="0.001"/>
   <testcase name="Limpiar puntuaciones del juego seleccionado" classname="com.retroarcade.presentation.HighScoresPresenterTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

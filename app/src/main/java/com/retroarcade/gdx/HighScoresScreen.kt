@@ -99,10 +99,10 @@ class HighScoresScreen(
             ArcadeFont.drawCenteredText(renderer, "JUEGA UNA PARTIDA PARA ENTRAR AL TOP 10", 360f, 570f, 2.0f, Color.GRAY)
         } else {
             // Cabecera de columnas
-            ArcadeFont.drawText(renderer, "POS", 80f, 920f, 2.4f, Color.YELLOW)
-            ArcadeFont.drawText(renderer, "INI", 180f, 920f, 2.4f, Color.YELLOW)
-            ArcadeFont.drawText(renderer, "PUNTOS", 320f, 920f, 2.4f, Color.YELLOW)
-            ArcadeFont.drawText(renderer, "NIVEL", 520f, 920f, 2.4f, Color.YELLOW)
+            ArcadeFont.drawText(renderer, "POS", 70f, 920f, 2.2f, Color.YELLOW)
+            ArcadeFont.drawText(renderer, "NOMBRE", 150f, 920f, 2.2f, Color.YELLOW)
+            ArcadeFont.drawText(renderer, "PUNTOS", 380f, 920f, 2.2f, Color.YELLOW)
+            ArcadeFont.drawText(renderer, "NV", 560f, 920f, 2.2f, Color.YELLOW)
 
             scores.forEachIndexed { index, entry ->
                 val rowY = 850f - (index * 62f)
@@ -114,10 +114,10 @@ class HighScoresScreen(
                     else -> Color.WHITE
                 }
 
-                ArcadeFont.drawText(renderer, posStr, 80f, rowY, 2.5f, color)
-                ArcadeFont.drawText(renderer, entry.initials, 180f, rowY, 2.5f, color)
-                ArcadeFont.drawText(renderer, entry.score.toString().padStart(7, '0'), 320f, rowY, 2.5f, color)
-                ArcadeFont.drawText(renderer, "NV ${entry.level}", 520f, rowY, 2.5f, color)
+                ArcadeFont.drawText(renderer, posStr, 70f, rowY, 2.4f, color)
+                ArcadeFont.drawText(renderer, entry.initials.take(8), 150f, rowY, 2.4f, color)
+                ArcadeFont.drawText(renderer, entry.score.toString().padStart(7, '0'), 380f, rowY, 2.4f, color)
+                ArcadeFont.drawText(renderer, "NV ${entry.level}", 560f, rowY, 2.4f, color)
             }
         }
 

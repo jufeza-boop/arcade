@@ -147,10 +147,10 @@ class LocalScoreRepositoryTest {
         val valid = ScoreEntry("ABC", 100, 1)
         assertEquals("ABC", valid.initials)
 
-        // Iniciales vacías o muy largas
+        // Iniciales vacías o muy largas (> 8 caracteres)
         assertThrows<IllegalArgumentException> { ScoreEntry("", 100, 1) }
         assertThrows<IllegalArgumentException> { ScoreEntry("   ", 100, 1) }
-        assertThrows<IllegalArgumentException> { ScoreEntry("ABCD", 100, 1) }
+        assertThrows<IllegalArgumentException> { ScoreEntry("NOMBRELARGO", 100, 1) }
 
         // Puntuación negativa
         assertThrows<IllegalArgumentException> { ScoreEntry("ABC", -1, 1) }

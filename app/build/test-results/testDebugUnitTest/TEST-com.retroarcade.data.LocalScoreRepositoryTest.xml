@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.retroarcade.data.LocalScoreRepositoryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-22T17:41:05.585Z" hostname="LAPTOP-CMGHJDO7" time="0.17">
+<testsuite name="com.retroarcade.data.LocalScoreRepositoryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-22T18:02:23.734Z" hostname="LAPTOP-CMGHJDO7" time="0.177">
   <properties/>
-  <testcase name="isHighScore determina correctamente si una puntuación califica para el Top 10" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.118"/>
+  <testcase name="isHighScore determina correctamente si una puntuación califica para el Top 10" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.125"/>
   <testcase name="ScoreEntry valida restricciones de iniciales, score y nivel" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.007"/>
-  <testcase name="Lectura de récords en un juego sin datos debe retornar una lista vacía" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.001"/>
+  <testcase name="Lectura de récords en un juego sin datos debe retornar una lista vacía" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.0"/>
   <testcase name="Guardar y recuperar puntuaciones ordenadas descendentemente" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.001"/>
   <testcase name="Intento de insertar una puntuación inferior al Top 10 lleno retorna false y no modifica la lista" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.004"/>
-  <testcase name="Las puntuaciones se almacenan y aíslan de forma independiente por GameId" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.002"/>
-  <testcase name="Inserción de 12 puntuaciones mantiene estrictamente las 10 mayores ordenadas" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.006"/>
+  <testcase name="Las puntuaciones se almacenan y aíslan de forma independiente por GameId" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.001"/>
+  <testcase name="Inserción de 12 puntuaciones mantiene estrictamente las 10 mayores ordenadas" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.007"/>
   <testcase name="clearScores vacía el ranking de un juego específico sin afectar a otros" classname="com.retroarcade.data.LocalScoreRepositoryTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

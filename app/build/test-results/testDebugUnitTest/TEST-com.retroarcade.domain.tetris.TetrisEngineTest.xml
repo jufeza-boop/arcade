@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.retroarcade.domain.tetris.TetrisEngineTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-11-22T18:02:23.927Z" hostname="LAPTOP-CMGHJDO7" time="0.035">
+  <properties/>
+  <testcase name="Ghost piece calcula con precisión la proyección de impacto en el suelo" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.012"/>
+  <testcase name="Reset reinicia el tablero, puntuación, líneas y estado RUNNING" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.003"/>
+  <testcase name="Limpieza de una línea simple otorga 100 * nivel y actualiza el contador" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <testcase name="Limpieza de 4 líneas simultáneas (Tetris) otorga 800 * nivel" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <testcase name="Detección de Game Over cuando los bloques se apilan hasta la cima" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <testcase name="Estado inicial: juego en marcha, nivel 1, puntuación 0 y piezas preparadas" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <testcase name="Hard drop lleva la pieza instantáneamente al fondo y la fija" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.004"/>
+  <testcase name="Pausa detiene la actualización y la recepción de comandos de juego" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <testcase name="Wall-kick permite rotar piezas junto a la pared" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <testcase name="Movimiento lateral respeta los límites del tablero (0 a 9)" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <testcase name="Soft drop desciende una fila y otorga 1 punto" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.002"/>
+  <testcase name="Progreso de nivel cada 10 líneas completadas" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <testcase name="Rotación horaria y antihoraria ciclan correctamente" classname="com.retroarcade.domain.tetris.TetrisEngineTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
