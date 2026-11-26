@@ -68,7 +68,8 @@ class RetroArcadeGame : Game() {
             GameId.PUZZLE_BOBBLE -> setScreen(PuzzleBobbleScreen(this))
             GameId.ARKANOID -> setScreen(ArkanoidScreen(this))
             GameId.SPACE_INVADERS -> setScreen(SpaceInvadersScreen(this))
-            else -> setScreen(GamePlaceholderScreen(this, gameId))
+            GameId.PACMAN -> setScreen(PacmanScreen(this))
+            GameId.SNAKE -> setScreen(SnakeScreen(this))
         }
     }
 

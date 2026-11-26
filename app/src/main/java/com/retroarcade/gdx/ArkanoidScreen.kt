@@ -29,10 +29,10 @@ class ArkanoidScreen(private val game: RetroArcadeGame) : ScreenAdapter() {
     // Punteros activos para movimiento fluido continuo al mantener pulsado
     private val activePointers = mutableMapOf<Int, ArcadeButton>()
 
-    // ── Virtual Pad ─────────────────────────────────────────────────────────
-    private val btnLeft = ArcadeButton(30f, 80f, 160f, 90f, "<<", Color.CYAN) {}
-    private val btnRight = ArcadeButton(530f, 80f, 160f, 90f, ">>", Color.CYAN) {}
-    private val btnLaunch = ArcadeButton(220f, 80f, 280f, 90f, "LANZAR", Color.GREEN) {
+    // ── Virtual Pad (estilo Space Invaders: botones grandes y cómodos) ──────
+    private val btnLeft = ArcadeButton(30f, 75f, 170f, 100f, "<<", Color.CYAN) {}
+    private val btnRight = ArcadeButton(520f, 75f, 170f, 100f, ">>", Color.CYAN) {}
+    private val btnLaunch = ArcadeButton(225f, 75f, 270f, 100f, "LANZAR", Color.GREEN) {
         engine.launchBall()
     }
 

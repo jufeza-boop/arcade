@@ -27,15 +27,15 @@ class PuzzleBobbleScreen(private val game: RetroArcadeGame) : ScreenAdapter() {
     private var isHighScoreSaved = false
     private var blinkTimer = 0f
 
-    // Botones de Virtual Pad
-    private val btnAimLeft = ArcadeButton(60f, 120f, 110f, 90f, "<", Color.CYAN) {
+    // Botones de Virtual Pad (estilo Space Invaders: disparar izquierda, apuntar derecha)
+    private val btnFire = ArcadeButton(30f, 75f, 250f, 100f, "DISPARAR", Color.GREEN) {
+        if (engine.shoot()) audio.playMove()
+    }
+    private val btnAimLeft = ArcadeButton(360f, 75f, 160f, 100f, "<<", Color.CYAN) {
         engine.rotateCannon(-5f)
     }
-    private val btnAimRight = ArcadeButton(200f, 120f, 110f, 90f, ">", Color.CYAN) {
+    private val btnAimRight = ArcadeButton(535f, 75f, 155f, 100f, ">>", Color.CYAN) {
         engine.rotateCannon(5f)
-    }
-    private val btnFire = ArcadeButton(440f, 120f, 220f, 90f, "DISPARAR", Color.GREEN) {
-        if (engine.shoot()) audio.playMove()
     }
 
     // Botón de Pausa HUD

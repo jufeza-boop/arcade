@@ -32,27 +32,27 @@ class TetrisScreen(private val game: RetroArcadeGame) : ScreenAdapter() {
     private var playerName = "JUGADOR"
     private var isHighScoreSaved = false
 
-    // Botones del Virtual Pad
-    private val btnLeft = ArcadeButton(40f, 180f, 80f, 80f, "<", Color.CYAN) {
+    // Botones del Virtual Pad (acciones a la izquierda, direcciones grandes a la derecha)
+    private val btnActionA = ArcadeButton(30f, 195f, 200f, 100f, "GIRAR", Color.YELLOW) {
+        if (engine.rotateClockwiseWithKick()) audio.playRotate()
+    }
+    private val btnActionB = ArcadeButton(30f, 75f, 200f, 100f, "DROP", Color.RED) {
+        engine.hardDrop()
+        audio.playDrop()
+    }
+    private val btnUp = ArcadeButton(430f, 285f, 110f, 88f, "↑", Color.CYAN) {
+        if (engine.rotateClockwiseWithKick()) audio.playRotate()
+    }
+    private val btnLeft = ArcadeButton(310f, 180f, 115f, 95f, "<<", Color.CYAN) {
         if (engine.tryMove(-1, 0)) audio.playMove()
     }
-    private val btnRight = ArcadeButton(220f, 180f, 80f, 80f, ">", Color.CYAN) {
-        if (engine.tryMove(1, 0)) audio.playMove()
-    }
-    private val btnDown = ArcadeButton(130f, 90f, 80f, 80f, "V", Color.CYAN) {
+    private val btnDown = ArcadeButton(430f, 75f, 110f, 95f, "↓", Color.CYAN) {
         val yBefore = engine.currentPiece.y
         engine.softDrop()
         if (engine.currentPiece.y < yBefore) audio.playMove()
     }
-    private val btnUp = ArcadeButton(130f, 270f, 80f, 80f, "^", Color.CYAN) {
-        if (engine.rotateClockwiseWithKick()) audio.playRotate()
-    }
-    private val btnActionA = ArcadeButton(450f, 160f, 100f, 100f, "A", Color.YELLOW) {
-        if (engine.rotateClockwiseWithKick()) audio.playRotate()
-    }
-    private val btnActionB = ArcadeButton(580f, 160f, 100f, 100f, "DROP", Color.RED) {
-        engine.hardDrop()
-        audio.playDrop()
+    private val btnRight = ArcadeButton(545f, 180f, 115f, 95f, ">>", Color.CYAN) {
+        if (engine.tryMove(1, 0)) audio.playMove()
     }
 
     // Botón de Pausa HUD
@@ -351,13 +351,13 @@ class TetrisScreen(private val game: RetroArcadeGame) : ScreenAdapter() {
     private fun drawControls(renderer: ShapeRenderer) {
         val isPad = (game.settingsRepository.getControlMode() == ControlMode.VIRTUAL_PAD)
         if (isPad) {
-            ArcadeUIHelper.drawButton(renderer, btnLeft, btnLeft == pressedButton, 4.0f)
-            ArcadeUIHelper.drawButton(renderer, btnRight, btnRight == pressedButton, 4.0f)
-            ArcadeUIHelper.drawButton(renderer, btnDown, btnDown == pressedButton, 4.0f)
-            ArcadeUIHelper.drawButton(renderer, btnUp, btnUp == pressedButton, 4.0f)
+            ArcadeUIHelper.drawButton(renderer, btnLeft, btnLeft == pressedButton, 3.5f)
+            ArcadeUIHelper.drawButton(renderer, btnRight, btnRight == pressedButton, 3.5f)
+            ArcadeUIHelper.drawButton(renderer, btnDown, btnDown == pressedButton, 3.8f)
+            ArcadeUIHelper.drawButton(renderer, btnUp, btnUp == pressedButton, 3.8f)
 
-            ArcadeUIHelper.drawButton(renderer, btnActionA, btnActionA == pressedButton, 4.0f)
-            ArcadeUIHelper.drawButton(renderer, btnActionB, btnActionB == pressedButton, 2.5f)
+            ArcadeUIHelper.drawButton(renderer, btnActionA, btnActionA == pressedButton, 2.8f)
+            ArcadeUIHelper.drawButton(renderer, btnActionB, btnActionB == pressedButton, 2.8f)
         } else {
             ArcadeUIHelper.drawButton(renderer, btnTouchHardDrop, btnTouchHardDrop == pressedButton, 3.2f)
             ArcadeFont.drawCenteredText(renderer, "DESLIZA LATERAL: MOVER * TAP: GIRAR", 360f, 60f, 2.0f, Color.GRAY)

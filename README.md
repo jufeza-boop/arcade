@@ -151,6 +151,6 @@ Para compilar la aplicación Android completa y generar el archivo APK:
 | **Bloque 1B** | Menú Principal Arcade, Selector de Juegos, Ajustes y High Scores Screen | :white_check_mark: Completado |
 | **Fase 1 (Motor)** | TetrisEngine + TetrisRenderer (SRS, líneas, gravedad) | :white_check_mark: Completado |
 | **Fase 2** | PuzzleBobbleEngine + PuzzleBobbleRenderer (trayectoria, BFS) | :white_check_mark: Completado |
-| **Fase 3** | Arkanoid y Space Invaders | :black_square_button: Pendiente |
-| **Fase 4** | Pac-Man y Snake | :black_square_button: Pendiente |
+| **Fase 3** | Arkanoid y Space Invaders | :white_check_mark: Completado |
+| **Fase 4** | Pac-Man y Snake | :white_check_mark: Completado |
 | **Fase 5** | Pulido Neón, ChiptuneSynth y Efectos Arcade | :black_square_button: Pendiente |
