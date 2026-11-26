@@ -66,6 +66,8 @@ class RetroArcadeGame : Game() {
         when (gameId) {
             GameId.TETRIS -> setScreen(TetrisScreen(this))
             GameId.PUZZLE_BOBBLE -> setScreen(PuzzleBobbleScreen(this))
+            GameId.ARKANOID -> setScreen(ArkanoidScreen(this))
+            GameId.SPACE_INVADERS -> setScreen(SpaceInvadersScreen(this))
             else -> setScreen(GamePlaceholderScreen(this, gameId))
         }
     }

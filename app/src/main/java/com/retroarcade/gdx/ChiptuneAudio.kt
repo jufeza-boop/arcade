@@ -19,6 +19,8 @@ class ChiptuneAudio(private val settingsRepository: SettingsRepository) {
     private var sfxDrop: Sound? = null
     private var sfxClear: Sound? = null
     private var sfxGameOver: Sound? = null
+    private var sfxShoot: Sound? = null
+    private var sfxExplosion: Sound? = null
 
     init {
         try {
@@ -27,6 +29,8 @@ class ChiptuneAudio(private val settingsRepository: SettingsRepository) {
             sfxDrop = createSound("drop.wav") { generateSquarePcm(150f, 0.07f) }
             sfxClear = createSound("clear.wav") { generateArpeggioPcm(listOf(523f, 659f, 784f, 1046f), 0.055f) }
             sfxGameOver = createSound("gameover.wav") { generateSlidePcm(420f, 120f, 0.35f) }
+            sfxShoot = createSound("shoot.wav") { generateSlidePcm(980f, 320f, 0.08f) }
+            sfxExplosion = createSound("explosion.wav") { generateNoisePcm(0.22f) }
         } catch (_: Throwable) {
             // Protección: si el audio de la plataforma no estuviera disponible, continúa en silencio
         }
@@ -50,6 +54,14 @@ class ChiptuneAudio(private val settingsRepository: SettingsRepository) {
 
     fun playGameOver() {
         if (!settingsRepository.isMuted()) sfxGameOver?.play(0.9f)
+    }
+
+    fun playShoot() {
+        if (!settingsRepository.isMuted()) sfxShoot?.play(0.55f)
+    }
+
+    fun playExplosion() {
+        if (!settingsRepository.isMuted()) sfxExplosion?.play(0.8f)
     }
 
     private fun createSound(filename: String, pcmGenerator: () -> ByteArray): Sound? {
@@ -117,6 +129,19 @@ class ChiptuneAudio(private val settingsRepository: SettingsRepository) {
         return pcm
     }
 
+    private fun generateNoisePcm(durationSec: Float): ByteArray {
+        val numSamples = (sampleRate * durationSec).toInt()
+        val pcm = ByteArray(numSamples)
+        var seed = 123456789
+        for (i in 0 until numSamples) {
+            seed = (seed * 1103515245 + 12345) and 0x7FFFFFFF
+            val raw = if ((seed and 1) == 0) 95 else -95
+            val env = 1f - (i.toFloat() / numSamples)
+            pcm[i] = (128 + (raw * env).toInt()).toByte()
+        }
+        return pcm
+    }
+
     private fun pcmToWav(pcmData: ByteArray, sampleRate: Int): ByteArray {
         val totalDataLen = pcmData.size + 36
         val byteRate = sampleRate * 1 * 1
@@ -163,6 +188,8 @@ class ChiptuneAudio(private val settingsRepository: SettingsRepository) {
             sfxDrop?.dispose()
             sfxClear?.dispose()
             sfxGameOver?.dispose()
+            sfxShoot?.dispose()
+            sfxExplosion?.dispose()
         } catch (_: Throwable) {}
     }
 }
